@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+<!--        <script src="/bower_components/angular/angular.js"></script> -->
+<!--        <script src="/bower_components/angular-youtube-embed/dist/angular-youtube-embed.js"></script> -->
+<!--        <script src="/bower_components/angular-route/angular-route.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+        <script src="/angular-youtube-embed.min.js"></script>
+        <script type="text/javascript">
+            var myApp = angular.module('myApp', ['ngRoute', 'youtube-embed']);
+
+            myApp.controller('MainCtrl', function ($scope) {
+              // have a video id
+              $scope.actual = 'i9MHigUZKEM';
+              $scope.videos = [
+                {
+                    'id': 1,
+                    'videoId': '04DOp1F9Od4',
+                    'title': 'JavaScript for Everybody',
+                    'author': 'Marcy Sutton'
+                },
+                {
+                    'id': 2,
+                    'videoId': 'mfOh-J-9BY0',
+                    'title': 'Plight Of The Butterfly: Object.observe()',
+                    'author': 'Addy Osmani'
+                },
+                {
+                    'id': 3,
+                    'videoId': 'v0TFmdO4ZP0',
+                    'title': 'JavaScript Masterclass',
+                    'author': 'Angelina Fabbro'
+                }
+              ];
+              $scope.chooseVideo = function(id) {
+                debugger;
+                $scope.actual = $scope.videos[id-1].videoId;
+              };
+            });
+
+            myApp.config(['$routeProvider',
+              function($routeProvider) {
+                $routeProvider.
+                when('/', {
+                    templateUrl: 'templates/home.html',
+                    controller: 'HomeController'
+                }).
+                when('/video/:videoId', {
+                    templateUrl: 'templates/video.html',
+                    controller: 'VideoController'
+                }).
+                otherwise({
+                    redirectTo: '/'
+                });
+            }]);
+
+            myApp.controller('VideoController', function($scope, $routeParams) {
+                $scope.video = $scope.videos[$routeParams.videoId - 1];
+            });
+
+            myApp.controller('HomeController', function($scope) {
+                $scope.message = "Welcome to watch.js!";
+            });
+        </script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="MainCtrl">
+            <ul ng-repeat="video in videos">
+                <li><a href="#/video/{{ video.id }}" ng-click="chooseVideo">
+                    {{ video.author }}: <i>{{ video.title }}</i>
+                </a></li>
+            </ul>
+            <hr />
+            <div ng-view=""></div>
+        </div>
+    </body>
+</html>
