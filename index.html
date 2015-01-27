@@ -3,7 +3,7 @@
     <head>
         <style>
         @font-face { font-family: DarkWoman; src: url('font/Darkwoman.otf'); }
-        div {
+        body * {
             font-family: DarkWoman;
             font-size: 30px;
         }
@@ -81,5 +81,8 @@
             <hr />
             <div ng-view=""></div>
         </div>
+        <footer>
+            &copy; 2015 <a href="http://watchjs.org">watch.js</a> | contact: <a href="{{'mailto:'}}{{'info'}}{{'@'}}watchjs.org">{{'info'}}{{'@'}}watchjs.org</a>
+        </footer>
     </body>
 </html>
