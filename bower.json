@@ -5,6 +5,7 @@
     "Tomasz Ducin <tomasz.ducin@gmail.com>"
   ],
   "description": "JavaScript Videos - Community Site",
+  "homepage": "http://watchjs.org",
   "main": "index.html",
   "keywords": [
     "js",
@@ -13,7 +14,6 @@
     "community"
   ],
   "license": "MIT",
-  "homepage": "not yet...",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: DarkWoman;
+    src: url('../font/Darkwoman.otf');
+}
+
+body * {
+    font-family: DarkWoman;
+    font-size: 30px;
+}
