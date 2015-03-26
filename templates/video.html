@@ -1,3 +1,10 @@
 <h1><i>{{ video.title }}</i></h1>
-<h2>{{ video.author }}</h2>
+<h2>{{ video.author }} at {{ video.event.name }}</h2>
+<div>
+    keywords:
+    <span ng-repeat="keyword in video.keywords">
+        {{ keyword }}
+    </span>
+</div>
+
 <youtube-video video-id="video.videoId"></youtube-video>

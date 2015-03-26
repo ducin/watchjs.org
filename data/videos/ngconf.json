@@ -106,5 +106,14 @@
             "angular"
         ],
         "event": "ng-conf-2014"
+    },
+    {
+        "videoId": "QHulaj5ZxbI",
+        "title": "ng-conf 2015 Keynote",
+        "author": "Brad Green, Igor Minar",
+        "keywords": [
+            "angular"
+        ],
+        "event": "ng-conf-2015"
     }
 ]

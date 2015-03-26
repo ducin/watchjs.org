@@ -2,12 +2,7 @@
 <html>
     <head>
         <link href="main.css" rel="stylesheet">
-<!--        <script src="/bower_components/angular/angular.js"></script> -->
-<!--        <script src="/bower_components/angular-youtube-embed/dist/angular-youtube-embed.js"></script> -->
-<!--        <script src="/bower_components/angular-route/angular-route.js"></script> -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-mocks.js"></script>
+        <script src="vendor.js"></script>
         <script src="angular-youtube-embed.min.js"></script>
         <script src="app.js"></script>
     </head>
@@ -16,7 +11,7 @@
             <div ng-view=""></div>
             <hr />
             <ul ng-repeat="video in videos">
-                <li><a href="#/video/{{ video.id }}" ng-click="chooseVideo">
+                <li><a href="#/video/{{ video.id }}">
                     {{ video.author }}: <i>{{ video.title }}</i>
                 </a></li>
             </ul>

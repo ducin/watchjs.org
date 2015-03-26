@@ -4,8 +4,23 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        cfg: {
+            paths: {
+                build: 'dist'
+            },
+            files: {
+                vendor: [
+                    'bower_components/underscore/underscore.js',
+                    'bower_components/angular/angular.js',
+                    'bower_components/angular-mocks/angular-mocks.js',
+                    'bower_components/angular-route/angular-route.js',
+                    'bower_components/angular-youtube/angular-youtube-player-api.js',
+                    'bower_components/angular-youtube-embed/dist/angular-youtube-embed.js',
+                ]
+            }
+        },
         clean: {
-            dist: ['dist']
+            build: ['<%= cfg.paths.build %>']
         },
         copy: {
             deps: {
@@ -15,27 +30,36 @@ module.exports = function (grunt) {
                         'dist/index.html': 'index.html'
                     }, {
                         expand: true,
-                        cwd: "templates/",
+                        cwd: 'templates/',
                         src: ["*.*", "**/*.*"],
-                        dest: "dist/templates"
+                        dest: '<%= cfg.paths.build %>/templates'
                     }, {
                         expand: true,
-                        cwd: "font/",
+                        cwd: 'font/',
                         src: ["*.*", "**/*.*"],
-                        dest: "dist/font"
+                        dest: '<%= cfg.paths.build %>/font'
                     }]
+            }
+        },
+        uglify: {
+            options: {
+                mangle: false
+            },
+            vendor: {
+                src: '<%= cfg.files.vendor %>',
+                dest: '<%= cfg.paths.build %>/vendor.js'
             }
         },
         browserify: {
             app: {
                 src: ['./js/app.js'],
-                dest: 'dist/app.js'
+                dest: '<%= cfg.paths.build %>/app.js'
             }
         },
         json_mapreduce: {
             events: {
                 src: ['data/events/**/*.json'],
-                dest: 'dist/events.json',
+                dest: '<%= cfg.paths.build %>/events.json',
                 options: {
                     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Map
                     // https://docs.python.org/2/library/functions.html#map
@@ -55,7 +79,7 @@ module.exports = function (grunt) {
             },
             videos: {
                 src: ['data/videos/**/*.json'],
-                dest: 'dist/videos.json',
+                dest: '<%= cfg.paths.build %>/videos.json',
                 options: {
                     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Map
                     // https://docs.python.org/2/library/functions.html#map
@@ -83,6 +107,6 @@ module.exports = function (grunt) {
     });
     require('load-grunt-tasks')(grunt);
 
-    grunt.registerTask('build', ['clean', 'json_mapreduce', 'browserify', 'copy']);
+    grunt.registerTask('build', ['clean', 'json_mapreduce', 'browserify', 'copy', 'uglify']);
     grunt.registerTask('default', ['build']);
 };

@@ -1,6 +1,11 @@
 var videos = require('../dist/videos.json');
 var events = require('../dist/events.json');
 
+videos = _.map(videos, function(v){
+  v.event = _.find(events, function(el){ return el.id == v.event });
+  return v;
+});
+
 var myApp = angular.module('myApp', ['ngRoute', 'ngMockE2E', 'youtube-embed']);
 
 myApp.config(['$routeProvider',
@@ -19,12 +24,20 @@ myApp.config(['$routeProvider',
                 });
     }]);
 
+// http://codevinsky.github.io/development/2013/09/12/lie-to-me/
 myApp.run(function ($httpBackend, $log) {
-    $httpBackend.whenGET('/videos').respond(function (method, url, data) {
+    $httpBackend.whenGET(new RegExp('/videos$')).respond(function (method, url, data) {
         $log.debug("Getting videos", videos);
         return [200, videos, {}];
     });
-    $httpBackend.whenGET('/events').respond(function (method, url, data) {
+    var videoById = new RegExp('/videos/(\\d+)$');
+    $httpBackend.whenGET(videoById).respond(function (method, url, data) {
+        var id = url.match(videoById)[1];
+        var video = videos[id - 1];
+        $log.debug("Getting video id:", id, video);
+        return [200, video, {}];
+    });
+    $httpBackend.whenGET(new RegExp('/events$')).respond(function (method, url, data) {
         $log.debug("Getting events", events);
         return [200, events, {}];
     });
@@ -33,19 +46,22 @@ myApp.run(function ($httpBackend, $log) {
 
 myApp.controller('MainCtrl', function ($scope, $http) {
     $scope.actual = 'i9MHigUZKEM';
-    $http.get('/events').success(function(data, status, headers, config){
-        $scope.events = events;
-    });
+//    $http.get('/events').success(function(data, status, headers, config){
+//        $scope.events = events;
+//    });
     $http.get('/videos').success(function(data, status, headers, config){
         $scope.videos = videos;
     });
-    $scope.chooseVideo = function (id) {
-        $scope.actual = $scope.videos[id].videoId;
-    };
 });
 
-myApp.controller('VideoController', function ($scope, $routeParams) {
-    $scope.video = $scope.videos[$routeParams.videoId - 1];
+myApp.controller('VideoController', function ($scope, $http, $routeParams) {
+    $http.get('/videos/' + $routeParams.videoId)
+    .success(function(data, status, headers, config){
+        $scope.video = data;
+    }).error(function(data, status, headers, config){
+        $log.error(arguments);
+    });;
+//    $scope.video = $scope.videos[$routeParams.videoId - 1];
 });
 
 myApp.controller('HomeController', function ($scope) {
