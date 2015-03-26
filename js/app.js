@@ -19,13 +19,13 @@ myApp.config(['$routeProvider',
                 });
     }]);
 
-myApp.run(function ($httpBackend) {
+myApp.run(function ($httpBackend, $log) {
     $httpBackend.whenGET('/videos').respond(function (method, url, data) {
-        console.log("Getting videos");
+        $log.debug("Getting videos", videos);
         return [200, videos, {}];
     });
     $httpBackend.whenGET('/events').respond(function (method, url, data) {
-        console.log("Getting events");
+        $log.debug("Getting events", events);
         return [200, events, {}];
     });
     $httpBackend.whenGET(/\.html$/).passThrough();
@@ -33,15 +33,19 @@ myApp.run(function ($httpBackend) {
 
 myApp.controller('MainCtrl', function ($scope, $http) {
     $scope.actual = 'i9MHigUZKEM';
-    $scope.events = events;
-    $scope.videos = videos;
+    $http.get('/events').success(function(data, status, headers, config){
+        $scope.events = events;
+    });
+    $http.get('/videos').success(function(data, status, headers, config){
+        $scope.videos = videos;
+    });
     $scope.chooseVideo = function (id) {
         $scope.actual = $scope.videos[id].videoId;
     };
 });
 
 myApp.controller('VideoController', function ($scope, $routeParams) {
-    $scope.video = $scope.videos[$routeParams.videoId];
+    $scope.video = $scope.videos[$routeParams.videoId - 1];
 });
 
 myApp.controller('HomeController', function ($scope) {
