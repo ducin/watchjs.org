@@ -1,0 +1,21 @@
+[
+    {
+        "id": "jsconf-au-2014",
+        "name": "JSConf AU 2014",
+        "link": "http://au.jsconf.com/"
+    },
+    {
+        "id": "ng-conf-2014",
+        "name": "ng-conf 2014"
+    },
+    {
+        "id": "gdg-tel-aviv",
+        "name": "Google Developers Group Tel Aviv",
+        "link": "http://www.meetup.com/GDG-Tel-Aviv/"
+    },
+    {
+        "id": "devday-2012",
+        "name": "DevDay 2012",
+        "link": "http://devday.pl/archive/2012"
+    }
+]

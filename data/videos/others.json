@@ -1,0 +1,22 @@
+[
+    {
+        "videoId": "PV_cFx29Xz0",
+        "title": "Javascript sucks and it doesn't matter",
+        "author": "Rob Ashton",
+        "keywords": [
+            "javascript"
+        ],
+        "event": "devday-2012"
+    },
+    {
+        "videoId": "kK--WKlng74",
+        "title": "Yeoman Bower and Grunt - Building Modern Webapps With Ease",
+        "author": "Shai Reznik",
+        "keywords": [
+            "yeoman",
+            "bower",
+            "grunt"
+        ],
+        "event": "gdg-tel-aviv"
+    }
+]

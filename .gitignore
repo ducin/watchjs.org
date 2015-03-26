@@ -1,3 +1,6 @@
+# App built version
+dist
+
 # Logs
 logs
 *.log

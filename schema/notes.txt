@@ -1,0 +1,35 @@
+event
+{
+"id": INT,
+"name": STRING,
+"country": STRING,
+"link": STRING,
+"city": STRING,
+? "location": COORDINATES,
+dateFrom: DATE,
+dateTo: DATE,
+? "videos": [VIDEOs]
+}
+--------------
+speaker
+{
+"id": INT,
+"name": STRING
+? "videos": [VIDEOs]
+}
+--------------
+topic
+{
+"id": STRING,
+? "videos": [VIDEOs],
+? "count": INT
+}
+--------------
+video
+{
+"id": ???
+"title": STRING
+? "speaker": [SPEAKER-ids]
+? "event": [EVENT-ids]
+? "topics": [TOPIC-ids]
+}
