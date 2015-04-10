@@ -1,10 +1,16 @@
-<h1><i>{{ video.title }}</i></h1>
-<h2>{{ video.author }} at {{ video.event.name }}</h2>
-<div>
-    keywords:
-    <span ng-repeat="keyword in video.keywords">
-        {{ keyword }}
-    </span>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h1>{{ video.title }}</h1>
+        <h3>
+            by <a href="#/speaker/{{ video.speakerId }}">{{ video.speaker | speaker }}</a>
+            at <a href="#/event/{{ video.eventId }}">{{ video.event.name }}</a>
+        </h3>
+        <youtube-video video-id="video.videoId"></youtube-video>
+        <div>
+            keywords:
+            <span ng-repeat="keyword in video.keywords">
+                {{ keyword }}
+            </span>
+        </div>
+    </div>
 </div>
-
-<youtube-video video-id="video.videoId"></youtube-video>

@@ -1,1 +1,9 @@
-<p>{{ message }}</p>
+<div ng-controller="MainCtrl">
+    <p>{{ message }}</p>
+    <hr />
+    <ul ng-repeat="video in videos">
+        <li><a href="#/video/{{ video.id }}">
+            {{ video.speaker | speaker }}: <i>{{ video.title }}</i>
+        </a></li>
+    </ul>
+</div>

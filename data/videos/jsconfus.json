@@ -2,10 +2,10 @@
     {
         "videoId": "v0TFmdO4ZP0",
         "title": "JavaScript Masterclass",
-        "author": "Angelina Fabbro",
+        "speakerId": "angelina-fabbro",
         "keywords": [
             "javascript"
         ],
-        "event": "jsconf-us-2013"
+        "eventId": "jsconf-us-2013"
     }
 ]

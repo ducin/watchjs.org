@@ -2,28 +2,28 @@
     {
         "videoId": "04DOp1F9Od4",
         "title": "JavaScript for Everybody",
-        "author": "Marcy Sutton",
+        "speakerId": "marcy-sutton",
         "keywords": [
             "javascript"
         ],
-        "event": "jsconf-eu-2014"
+        "eventId": "jsconf-eu-2014"
     },
     {
         "videoId": "mfOh-J-9BY0",
         "title": "Plight Of The Butterfly - Everything You Wanted To Know About Object.observe()",
-        "author": "Addy Osmani",
+        "speakerId": "addy-osmani",
         "keywords": [
             "ecmascript"
         ],
-        "event": "jsconf-eu-2014"
+        "eventId": "jsconf-eu-2014"
     },
     {
         "videoId": "3D1WeSCSkPQ",
         "title": "To hell with jQuery",
-        "author": "Karolina Szczur",
+        "speakerId": "karolina-szczur",
         "keywords": [
             "jquery"
         ],
-        "event": "jsconf-eu-2012"
+        "eventId": "jsconf-eu-2012"
     }
 ]

@@ -2,118 +2,118 @@
     {
         "videoId": "YbyZdFA6Qt4",
         "title": "Angular === Community",
-        "author": "Igor Minar",
+        "speakerId": "igor-minar",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "_OGGsf1ZXMs",
         "title": "Dependency Injection",
-        "author": "Vojta Jina",
+        "speakerId": "vojta-jina",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "aQipuiTcn3U",
         "title": "End to End Angular Testing with Protractor",
-        "author": "Julie Ralph",
+        "speakerId": "julie-ralph",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "UMkd0nYmLzY",
         "title": "Deep Dive into Custom Directives",
-        "author": "Dave Smith",
+        "speakerId": "dave-smith",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "u6TeBM_SC8w",
         "title": "How to use Typescript on your Angular Application and Be Happy",
-        "author": "Sean Hess",
+        "speakerId": "sean-hess",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "e4yUTkva_FM",
         "title": "Building Realtime Apps With Firebase and Angular",
-        "author": "Anant Narayanan",
+        "speakerId": "anant-narayanan",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "4yulGISBF8w",
         "title": "Angular and RequireJS",
-        "author": "Thomas Burleson",
+        "speakerId": "thomas-burleson",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "NTPutZ99XWY",
         "title": "Angular with Browserify",
-        "author": "Ben Clinkinbeard",
+        "speakerId": "ben-clinkinbeard",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "wVntVkRLR3M",
         "title": "Using AngularJS to create iPhone & Android applications with PhoneGap",
-        "author": "Daniel Zen",
+        "speakerId": "daniel-zen",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "MhVgGE-pgEY",
         "title": "Robotics powering interfaces with AngularJS to the Arduino",
-        "author": "Ari Lerner",
+        "speakerId": "ari-lerner",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "XcRdO5QVlqE",
         "title": "Going Postal with Angular in Promises",
-        "author": "Christian Lilley",
+        "speakerId": "christian-lilley",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "zyYpHIOrk_Y",
         "title": "Angular Performance",
-        "author": "Karl Seamon",
+        "speakerId": "karl-seamon",
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2014"
+        "eventId": "ng-conf-2014"
     },
     {
         "videoId": "QHulaj5ZxbI",
         "title": "ng-conf 2015 Keynote",
-        "author": "Brad Green, Igor Minar",
+        "speakerId": ["brad-green", "igor-minar"],
         "keywords": [
             "angular"
         ],
-        "event": "ng-conf-2015"
+        "eventId": "ng-conf-2015"
     }
 ]

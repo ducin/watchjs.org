@@ -3,7 +3,25 @@
     src: url('../font/Darkwoman.otf');
 }
 
+@font-face {
+    font-family: Segoe Print;
+    src: url('../font/segoe-print.ttf');
+}
+
+/* navbar fixed top */
+body {
+  padding-top: 70px;
+}
+
 body * {
-    font-family: DarkWoman;
-    font-size: 30px;
+    /*font-family: DarkWoman;*/
+    font-family: Segoe Print;
+    /*font-size: 30px;*/
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
 }
