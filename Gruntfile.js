@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
 
     var idVideo = 0;
+    var examples = require('./node_modules/grunt-json-mapreduce/examples');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -68,18 +69,11 @@ module.exports = function (grunt) {
                 options: {
                     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Map
                     // https://docs.python.org/2/library/functions.html#map
-                    map: function (currentValue, index, array) {
-                        return currentValue;
-                    },
+                    map: examples.map.pass,
                     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
                     // https://docs.python.org/2/library/functions.html#reduce
-                    reduce: function (previousValue, currentValue, index, array) {
-                        if (typeof previousValue === "undefined") {
-                            return currentValue;
-                        } else {
-                            return previousValue.concat(currentValue);
-                        }
-                    }
+                    reduce: examples.reduce.concat,
+                    debug: examples.debug.logStringify
                 }
             },
             videos: {
@@ -96,16 +90,8 @@ module.exports = function (grunt) {
                     },
                     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
                     // https://docs.python.org/2/library/functions.html#reduce
-                    reduce: function (previousValue, currentValue, index, array) {
-                        if (typeof previousValue === "undefined") {
-                            return currentValue;
-                        } else {
-                            return previousValue.concat(currentValue);
-                        }
-                    },
-                    debug: function (value) {
-                        grunt.log.oklns("Elements: " + value.length);
-                    }
+                    reduce: examples.reduce.concat,
+                    debug: examples.debug.logStringify
                 }
             },
             speakers: {
@@ -114,18 +100,11 @@ module.exports = function (grunt) {
                 options: {
                     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Map
                     // https://docs.python.org/2/library/functions.html#map
-                    map: function (currentValue, index, array) {
-                        return currentValue;
-                    },
+                    map: examples.map.pass,
                     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
                     // https://docs.python.org/2/library/functions.html#reduce
-                    reduce: function (previousValue, currentValue, index, array) {
-                        if (typeof previousValue === "undefined") {
-                            return currentValue;
-                        } else {
-                            return previousValue.concat(currentValue);
-                        }
-                    }
+                    reduce: examples.reduce.concat,
+                    debug: examples.debug.logStringify
                 }
             }
         }
