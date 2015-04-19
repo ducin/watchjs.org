@@ -33,7 +33,8 @@ module.exports = function (grunt) {
                         'dist/main.css': 'css/main.css',
                         'dist/bootstrap.css': 'bower_components/bootstrap/dist/css/bootstrap.css',
                         'dist/bootstrap-theme.css': 'bower_components/bootstrap/dist/css/bootstrap-theme.css',
-                        'dist/index.html': 'index.html'
+                        'dist/index.html': 'index.html',
+                        'dist/favicon.png': 'favicon.png'
                     }, {
                         expand: true,
                         cwd: 'templates/',
