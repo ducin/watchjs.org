@@ -3,9 +3,11 @@
         <h1>{{ event.name }}</h1>
         videos:
         <ul>
-            <li>list of</li>
-            <li>videos recorded</li>
-            <li>during that conference</li>
+            <li ng-repeat="video in event.videos">
+                <a href="#/video/{{ video.id }}">{{ video.title }}</a>
+                by
+                <a href="#/speaker/{{ video.speakerId }}">{{ video.speaker.name }}</a>
+            </li>
         </ul>
     </div>
 </div>

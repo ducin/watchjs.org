@@ -1,5 +1,13 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <h1>{{ speaker.name }}</h1>
+        videos:
+        <ul>
+            <li ng-repeat="video in speaker.videos">
+                <a href="#/video/{{ video.id }}">{{ video.title }}</a>
+                at
+                <a href="#/event/{{ video.eventId }}">{{ video.event.name }}</a>
+            </li>
+        </ul>
     </div>
 </div>

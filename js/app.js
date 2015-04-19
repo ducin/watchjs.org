@@ -1,19 +1,36 @@
-var videos = require('../dist/videos.json');
-var events = require('../dist/events.json');
-var speakers = require('../dist/speakers.json');
+// MOCK PART
 
-// replacing event hash with event nested object
-videos = _.map(videos, function(v){
-  v.event = _.find(events, function(el){ return el.id === v.eventId });
+var videos, rawVideos = require('../dist/videos.json');
+var events, rawEvents = require('../dist/events.json');
+var speakers, rawSpeakers = require('../dist/speakers.json');
+
+videos = _.map(rawVideos, function(v){
+  // replacing event hash-id with event nested object
+  v.event = _.find(rawEvents, function(el){ return el.id === v.eventId; });
+  // replacing speaker hash-d with speaker nested object
   if (_.isArray(v.speakerId)) {
     v.speaker = _.map(v.speakerId, function(speakerId){
-      return _.find(speakers, function(el){ return el.id === speakerId });
+      return _.find(rawSpeakers, function(el){ return el.id === speakerId; });
     });
   } else {
-    v.speaker = _.find(speakers, function(el){ return el.id === v.speakerId });
+    v.speaker = _.find(rawSpeakers, function(el){ return el.id === v.speakerId; });
   }
   return v;
 });
+
+events = _.map(rawEvents, function(e){
+  // attaching videos list to each event
+  e.videos = _.filter(rawVideos, function(v){ return v.eventId === e.id; });
+  return e;
+});
+
+speakers = _.map(rawSpeakers, function(s){
+  // attaching videos list to each speaker
+  s.videos = _.filter(rawVideos, function(v){ return v.speakerId === s.id; });
+  return s;
+});
+
+// APP PART
 
 var myApp = angular.module('myApp', ['ngRoute', 'ngMockE2E', 'slugifier', 'youtube-embed']);
 
