@@ -4,75 +4,107 @@
         "name": "Addy Osmani"
     },
     {
-        "id": "marcy-sutton",
-        "name": "Marcy Sutton"
+        "id": "anant-narayanan",
+        "name": "Anant Narayanan"
     },
     {
         "id": "angelina-fabbro",
         "name": "Angelina Fabbro"
     },
     {
-        "id": "rob-ashton",
-        "name": "Rob Ashton"
-    },
-    {
-        "id": "shai-reznik",
-        "name": "Shai Reznik"
-    },
-    {
-        "id": "igor-minar",
-        "name": "Igor Minar"
-    },
-    {
-        "id": "vojta-jina",
-        "name": "Vojta Jina"
-    },
-    {
-        "id": "julie-ralph",
-        "name": "Julie Ralph"
-    },
-    {
-        "id": "dave-smith",
-        "name": "Dave Smith"
-    },
-    {
-        "id": "sean-hess",
-        "name": "Sean Hess"
-    },
-    {
-        "id": "anant-narayanan",
-        "name": "Anant Narayanan"
-    },
-    {
-        "id": "thomas-burleson",
-        "name": "Thomas Burleson"
-    },
-    {
-        "id": "karl-seamon",
-        "name": "Karl Seamon"
-    },
-    {
-        "id": "christian-lilley",
-        "name": "Christian Lilley"
+        "id": "ari-lerner",
+        "name": "Ari Lerner"
     },
     {
         "id": "ben-clinkinbeard",
         "name": "Ben Clinkinbeard"
     },
     {
-        "id": "daniel-zen",
-        "name": "Daniel Zen"
-    },
-    {
-        "id": "ari-lerner",
-        "name": "Ari Lerner"
+        "id": "ben-teese",
+        "name": "Ben Teese"
     },
     {
         "id": "brad-green",
         "name": "Brad Green"
     },
     {
+        "id": "christian-lilley",
+        "name": "Christian Lilley"
+    },
+    {
+        "id": "dan-wahlin",
+        "name": "Dan Wahlin"
+    },
+    {
+        "id": "daniel-zen",
+        "name": "Daniel Zen"
+    },
+    {
+        "id": "dave-smith",
+        "name": "Dave Smith"
+    },
+    {
+        "id": "ido-sela",
+        "name": "Ido Sela"
+    },
+    {
+        "id": "igor-minar",
+        "name": "Igor Minar"
+    },
+    {
+        "id": "jeff-cross",
+        "name": "Jeff Cross"
+    },
+    {
+        "id": "jeremy-elbourn",
+        "name": "Jeremy Elbourn"
+    },
+    {
+        "id": "john-papa",
+        "name": "John Papa"
+    },
+    {
+        "id": "julie-ralph",
+        "name": "Julie Ralph"
+    },
+    {
+        "id": "karl-seamon",
+        "name": "Karl Seamon"
+    },
+    {
         "id": "karolina-szczur",
         "name": "Karolina Szczur"
+    },
+    {
+        "id": "marcy-sutton",
+        "name": "Marcy Sutton"
+    },
+    {
+        "id": "misko-hevery",
+        "name": "Miško Hevery"
+    },
+    {
+        "id": "rachel-dale",
+        "name": "Rachel Dale"
+    },
+    {
+        "id": "rob-ashton",
+        "name": "Rob Ashton"
+    },
+    {
+        "id": "sean-hess",
+        "name": "Sean Hess"
+    },
+    {
+        "id": "shai-reznik",
+        "name": "Shai Reznik"
+    },
+    {
+        "id": "thomas-burleson",
+        "name": "Thomas Burleson"
+    },
+    {
+        "id": "vojta-jina",
+        "name": "Vojta Jina"
     }
 ]

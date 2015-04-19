@@ -56,22 +56,12 @@ module.exports = function (grunt) {
                 dest: '<%= cfg.paths.build %>/vendor.js'
             }
         },
-        browserify: {
-            app: {
-                src: ['./js/app.js'],
-                dest: '<%= cfg.paths.build %>/app.js'
-            }
-        },
         json_mapreduce: {
             events: {
                 src: ['data/events/**/*.json'],
                 dest: '<%= cfg.paths.build %>/events.json',
                 options: {
-                    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Map
-                    // https://docs.python.org/2/library/functions.html#map
                     map: examples.map.pass,
-                    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
-                    // https://docs.python.org/2/library/functions.html#reduce
                     reduce: examples.reduce.concat,
                     debug: examples.debug.logStringify
                 }
@@ -80,16 +70,12 @@ module.exports = function (grunt) {
                 src: ['data/videos/**/*.json'],
                 dest: '<%= cfg.paths.build %>/videos.json',
                 options: {
-                    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Map
-                    // https://docs.python.org/2/library/functions.html#map
                     map: function (currentValue, index, array) {
                         return currentValue.map(function (element) {
                             element.id = ++idVideo;
                             return element;
                         });
                     },
-                    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
-                    // https://docs.python.org/2/library/functions.html#reduce
                     reduce: examples.reduce.concat,
                     debug: examples.debug.logStringify
                 }
@@ -98,14 +84,16 @@ module.exports = function (grunt) {
                 src: ['data/speakers/**/*.json'],
                 dest: '<%= cfg.paths.build %>/speakers.json',
                 options: {
-                    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Map
-                    // https://docs.python.org/2/library/functions.html#map
                     map: examples.map.pass,
-                    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
-                    // https://docs.python.org/2/library/functions.html#reduce
                     reduce: examples.reduce.concat,
                     debug: examples.debug.logStringify
                 }
+            }
+        },
+        browserify: {
+            app: {
+                src: ['./js/app.js'],
+                dest: '<%= cfg.paths.build %>/app.js'
             }
         }
     });
