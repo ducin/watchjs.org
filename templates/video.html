@@ -2,14 +2,16 @@
     <div class="panel-body">
         <h1>{{ video.title }}</h1>
         <h3>
-            by <a href="#/speaker/{{ video.speakerId }}">{{ video.speaker | speaker }}</a>
-            at <a href="#/event/{{ video.eventId }}">{{ video.event.name }}</a>
+            by <span ng-repeat="speaker in video.speakers">
+                <a href="#/speaker/{{ speaker.id }}">{{ speaker.name }}</a>{{$last ? '' : ', '}}
+            </span>
+            at <a href="#/event/{{ video.event.id }}">{{ video.event.name }}</a>
         </h3>
         <youtube-video video-id="video.videoId"></youtube-video>
         <div>
-            keywords:
-            <span ng-repeat="keyword in video.keywords">
-                {{ keyword }}
+            tags:
+            <span ng-repeat="tag in video.tags">
+                {{ tag }}
             </span>
         </div>
     </div>

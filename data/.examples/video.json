@@ -1,0 +1,16 @@
+{
+    "videoId": "YbyZdFA6Qt4",
+    "title": "Angular === Community",
+    "speakers": [{
+        "id": "igor-minar",
+        "name": "Igor Minar"
+    }],
+    "event": {
+        "id": "ng-conf-2014",
+        "name": "ng-conf 2014"
+    },
+    "tags": [
+        "angular",
+        "community"
+    ]
+}

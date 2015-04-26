@@ -1,0 +1,160 @@
+[
+    {
+        "videoId": "mfOh-J-9BY0",
+        "title": "Plight Of The Butterfly - Everything You Wanted To Know About Object.observe()",
+        "speakerIds": [
+            "addy-osmani"
+        ],
+        "tags": [
+            "ecmascript"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "IXIkTrq3Rgg",
+        "title": "JS Responsibilities",
+        "speakerIds": [
+            "brendan-eich"
+        ],
+        "tags": [
+            "javascript"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "qbKWsbJ76-s",
+        "title": "Promises and Generators: control flow utopia",
+        "speakerIds": [
+            "forbes-lindesay"
+        ],
+        "tags": [
+            "javascript"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "R9deOzRwgow",
+        "title": "Reimplement RegExp in JavaScript",
+        "speakerIds": [
+            "julian-viereck"
+        ],
+        "tags": [
+            "regexp"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "x3zXlPkzhgw",
+        "title": "Hardware is Stupid Simple",
+        "speakerIds": [
+            "sara-chipps"
+        ],
+        "tags": [
+            "hardware"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "5LUkHss6CAw",
+        "title": "native.js: JavaScript in your native mobile apps",
+        "tags": [
+            "javascript",
+            "mobile"
+        ],
+        "speakerIds": [
+            "allen-pike"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "iSxNCYcPAFk",
+        "title": "The JavaScript Interpreter, Interpreted",
+        "tags": [
+            "javascript"
+        ],
+        "speakerIds": [
+            "martha-girdler"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "uwQsU0PwtaE",
+        "title": "The API is dead. Long live the protocol!",
+        "tags": [
+            "api"
+        ],
+        "speakerIds": [
+            "simon-tennant"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "1i7Q6_ZnhUc",
+        "title": "People First",
+        "tags": [
+            "keynote"
+        ],
+        "speakerIds": [
+            "adam-brault"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "F9EQ8p5Jw9Q",
+        "title": "Lessons from 4 Years of writing the driver for MongoDB",
+        "tags": [
+            "mongoDB"
+        ],
+        "speakerIds": [
+            "christian-kvalheim"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "x7cQ3mrcKaY",
+        "title": "React: Rethinking best practices",
+        "tags": [
+            "react"
+        ],
+        "speakerIds": [
+            "pete-hunt"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "e9httij2RG0",
+        "title": "Streaming Algorithms in Javascript and Node.js",
+        "tags": [
+            "algorithm",
+            "javascript",
+            "node.js"
+        ],
+        "speakerIds": [
+            "julien-genestoux"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "NpC1GbPw-fk",
+        "title": "Game server development in node.js",
+        "tags": [
+            "node.js",
+            "games"
+        ],
+        "speakerIds": [
+            "charlie-crane"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "ARophKqA4E0",
+        "title": "I have a Dreamcode: Build Apps, not Backends",
+        "tags": [
+            "javascript"
+        ],
+        "speakerIds": [
+            "alex-feyerke"
+        ],
+        "eventId": "jsconf-eu-2013"
+    }
+]

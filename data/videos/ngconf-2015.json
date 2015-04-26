@@ -2,8 +2,11 @@
     {
         "videoId": "QHulaj5ZxbI",
         "title": "ng-conf 2015 Keynote",
-        "speakerId": ["brad-green", "igor-minar"],
-        "keywords": [
+        "speakerIds": [
+            "brad-green",
+            "igor-minar"
+        ],
+        "tags": [
             "angular"
         ],
         "eventId": "ng-conf-2015"

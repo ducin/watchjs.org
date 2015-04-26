@@ -1,37 +1,3 @@
-// MOCK PART
-
-var videos, rawVideos = require('../dist/videos.json');
-var events, rawEvents = require('../dist/events.json');
-var speakers, rawSpeakers = require('../dist/speakers.json');
-
-videos = _.map(rawVideos, function(v){
-  // replacing event hash-id with event nested object
-  v.event = _.find(rawEvents, function(el){ return el.id === v.eventId; });
-  // replacing speaker hash-d with speaker nested object
-  if (_.isArray(v.speakerId)) {
-    v.speaker = _.map(v.speakerId, function(speakerId){
-      return _.find(rawSpeakers, function(el){ return el.id === speakerId; });
-    });
-  } else {
-    v.speaker = _.find(rawSpeakers, function(el){ return el.id === v.speakerId; });
-  }
-  return v;
-});
-
-events = _.map(rawEvents, function(e){
-  // attaching videos list to each event
-  e.videos = _.filter(rawVideos, function(v){ return v.eventId === e.id; });
-  return e;
-});
-
-speakers = _.map(rawSpeakers, function(s){
-  // attaching videos list to each speaker
-  s.videos = _.filter(rawVideos, function(v){ return v.speakerId === s.id; });
-  return s;
-});
-
-// APP PART
-
 var myApp = angular.module('myApp', ['ngRoute', 'ngMockE2E', 'slugifier', 'youtube-embed']);
 
 /*
@@ -76,40 +42,6 @@ myApp.config(['$routeProvider',
                 });
     }]);
 
-// http://codevinsky.github.io/development/2013/09/12/lie-to-me/
-myApp.run(function ($httpBackend, $log) {
-    $httpBackend.whenGET(new RegExp('/videos$')).respond(function (method, url, data) {
-        $log.debug("Getting videos", videos);
-        return [200, videos, {}];
-    });
-    var videoById = new RegExp('/videos/(\\d+)$');
-    $httpBackend.whenGET(videoById).respond(function (method, url, data) {
-        var id = url.match(videoById)[1];
-        var video = videos[id - 1];
-        $log.debug("Getting video id:", id, video);
-        return [200, video, {}];
-    });
-    var speakerBySlug = new RegExp('/speakers/([a-z-]+)$');
-    $httpBackend.whenGET(speakerBySlug).respond(function (method, url, data) {
-        var id = url.match(speakerBySlug)[1];
-        var speaker = _.find(speakers, function(el){ return el.id === id });
-        $log.debug("Getting speaker id:", id, speaker);
-        return [200, speaker, {}];
-    });
-    var eventBySlug = new RegExp('/events/([a-z0-9-]+)$');
-    $httpBackend.whenGET(eventBySlug).respond(function (method, url, data) {
-        var id = url.match(eventBySlug)[1];
-        var event = _.find(events, function(el){ return el.id === id });
-        $log.debug("Getting event id:", id, event);
-        return [200, event, {}];
-    });
-    $httpBackend.whenGET(new RegExp('/events$')).respond(function (method, url, data) {
-        $log.debug("Getting events", events);
-        return [200, events, {}];
-    });
-    $httpBackend.whenGET(/\.html$/).passThrough();
-});
-
 myApp.filter('speaker', function () {
   return function (input) {
     return angular.isArray(input) ? _.map(input, function(el){ return el.name }).join(', ') : input.name;
@@ -117,11 +49,8 @@ myApp.filter('speaker', function () {
 });
 
 myApp.controller('MainCtrl', function ($scope, $http) {
-//    $http.get('/events').success(function(data, status, headers, config){
-//        $scope.events = events;
-//    });
     $http.get('/videos').success(function(data, status, headers, config){
-        $scope.videos = videos;
+        $scope.videos = data;
     });
 });
 

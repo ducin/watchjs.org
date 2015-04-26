@@ -1,0 +1,13 @@
+{
+    "name": "Igor Minar",
+    "videos": [{
+        "video": {
+            "title": "Angular === Community",
+            "id": 13
+        },
+        "event": {
+            "name": "ng-conf 2014",
+            "slug": "ng-conf-2014"
+        }
+    }]
+}

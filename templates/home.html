@@ -5,7 +5,7 @@
         <li><a href="#/video/{{ video.id }}">
             {{ video.title }}
             <br />
-            <i>({{ video.speaker | speaker }})</i>
+            <i>(<span ng-repeat="speaker in video.speakers">{{ speaker.name }}{{$last ? '' : ', '}}</span>)</i>
         </a></li>
     </ul>
 </div>

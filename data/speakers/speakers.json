@@ -1,7 +1,20 @@
 [
     {
+        "id": "adam-brault",
+        "name": "Adam Brault"
+    },
+    {
         "id": "addy-osmani",
-        "name": "Addy Osmani"
+        "name": "Addy Osmani",
+        "twitter": "addyosmani"
+    },
+    {
+        "id": "alex-feyerke",
+        "name": "Alex Feyerke"
+    },
+    {
+        "id": "allen-pike",
+        "name": "Allen Pike"
     },
     {
         "id": "anant-narayanan",
@@ -9,7 +22,8 @@
     },
     {
         "id": "angelina-fabbro",
-        "name": "Angelina Fabbro"
+        "name": "Angelina Fabbro",
+        "twitter": "hopefulcyborg"
     },
     {
         "id": "ari-lerner",
@@ -25,7 +39,21 @@
     },
     {
         "id": "brad-green",
-        "name": "Brad Green"
+        "name": "Brad Green",
+        "twitter": "bradlygreen"
+    },
+    {
+        "id": "brendan-eich",
+        "name": "Brendan Eich",
+        "twitter": "BrendanEich"
+    },
+    {
+        "id": "charlie-crane",
+        "name": "Charlie Crane"
+    },
+    {
+        "id": "christian-kvalheim",
+        "name": "Christian Kvalheim"
     },
     {
         "id": "christian-lilley",
@@ -44,12 +72,21 @@
         "name": "Dave Smith"
     },
     {
+        "id": "forbes-lindesay",
+        "name": "Forbes Lindesay"
+    },
+    {
         "id": "ido-sela",
         "name": "Ido Sela"
     },
     {
         "id": "igor-minar",
         "name": "Igor Minar"
+    },
+    {
+        "id": "jake-archibald",
+        "name": "Jake Archibald",
+        "twitter": "jaffathecake"
     },
     {
         "id": "jeff-cross",
@@ -64,8 +101,16 @@
         "name": "John Papa"
     },
     {
+        "id": "julian-viereck",
+        "name": "Julian Viereck"
+    },
+    {
         "id": "julie-ralph",
         "name": "Julie Ralph"
+    },
+    {
+        "id": "julien-genestoux",
+        "name": "Julien Genestoux"
     },
     {
         "id": "karl-seamon",
@@ -80,8 +125,21 @@
         "name": "Marcy Sutton"
     },
     {
+        "id": "martha-girdler",
+        "name": "Martha Girdler"
+    },
+    {
         "id": "misko-hevery",
-        "name": "Miško Hevery"
+        "name": "Miško Hevery",
+        "twitter": "mhevery"
+    },
+    {
+        "id": "pete-hunt",
+        "name": "Pete Hunt"
+    },
+    {
+        "id": "philip-roberts",
+        "name": "Philip Roberts"
     },
     {
         "id": "rachel-dale",
@@ -92,12 +150,20 @@
         "name": "Rob Ashton"
     },
     {
+        "id": "sara-chipps",
+        "name": "Sara Chipps"
+    },
+    {
         "id": "sean-hess",
         "name": "Sean Hess"
     },
     {
         "id": "shai-reznik",
         "name": "Shai Reznik"
+    },
+    {
+        "id": "simon-tennant",
+        "name": "Simon Tennant"
     },
     {
         "id": "thomas-burleson",

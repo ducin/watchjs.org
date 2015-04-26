@@ -1,0 +1,46 @@
+[
+    {
+        "videoId": "04DOp1F9Od4",
+        "title": "JavaScript for Everybody",
+        "speakerIds": [
+            "marcy-sutton"
+        ],
+        "tags": [
+            "javascript"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "SmZ9XcTpMS4",
+        "title": "The ServiceWorker is coming, look busy",
+        "tags": [
+            "javascript"
+        ],
+        "speakerIds": [
+            "jake-archibald"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "8aGhZQkoFbQ",
+        "title": "What the heck is the event loop anyway?",
+        "tags": [
+            "javascript"
+        ],
+        "speakerIds": [
+            "philip-roberts"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "sS5EByZm1EI",
+        "title": "Got Make?",
+        "tags": [
+            "javascript"
+        ],
+        "speakerIds": [
+            "rob-ashton"
+        ],
+        "eventId": "jsconf-eu-2014"
+    }
+]

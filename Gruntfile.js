@@ -35,12 +35,14 @@ module.exports = function (grunt) {
         copy: {
             deps: {
                 files: [{
-                        'dist/angular-youtube-embed.min.js': 'js/angular-youtube-embed.min.js',
-                        'dist/main.css': 'css/main.css',
-                        'dist/bootstrap.css': 'bower_components/bootstrap/dist/css/bootstrap.css',
-                        'dist/bootstrap-theme.css': 'bower_components/bootstrap/dist/css/bootstrap-theme.css',
-                        'dist/index.html': 'index.html',
-                        'dist/favicon.png': 'favicon.png'
+                        '<%= cfg.paths.build %>/angular-youtube-embed.min.js': 'js/angular-youtube-embed.min.js',
+                        '<%= cfg.paths.build %>/app.js': 'js/app.js',
+                        '<%= cfg.paths.build %>/underscore-mixins.js': 'js/underscore-mixins.js',
+                        '<%= cfg.paths.build %>/main.css': 'css/main.css',
+                        '<%= cfg.paths.build %>/bootstrap.css': 'bower_components/bootstrap/dist/css/bootstrap.css',
+                        '<%= cfg.paths.build %>/bootstrap-theme.css': 'bower_components/bootstrap/dist/css/bootstrap-theme.css',
+                        '<%= cfg.paths.build %>/index.html': 'index.html',
+                        '<%= cfg.paths.build %>/favicon.png': 'favicon.png'
                     }, {
                         expand: true,
                         cwd: 'templates/',
@@ -69,8 +71,7 @@ module.exports = function (grunt) {
                 dest: '<%= cfg.paths.build %>/events.json',
                 options: {
                     map: examples.map.pass,
-                    reduce: examples.reduce.concat,
-                    debug: examples.debug.logStringify
+                    reduce: examples.reduce.concat
                 }
             },
             videos: {
@@ -83,8 +84,7 @@ module.exports = function (grunt) {
                             return element;
                         });
                     },
-                    reduce: examples.reduce.concat,
-                    debug: examples.debug.logStringify
+                    reduce: examples.reduce.concat
                 }
             },
             speakers: {
@@ -92,15 +92,14 @@ module.exports = function (grunt) {
                 dest: '<%= cfg.paths.build %>/speakers.json',
                 options: {
                     map: examples.map.pass,
-                    reduce: examples.reduce.concat,
-                    debug: examples.debug.logStringify
+                    reduce: examples.reduce.concat
                 }
             }
         },
         browserify: {
             app: {
-                src: ['./js/app.js'],
-                dest: '<%= cfg.paths.build %>/app.js'
+                src: ['./js/mock.js'],
+                dest: '<%= cfg.paths.build %>/mock.js'
             }
         }
     });

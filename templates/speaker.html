@@ -1,12 +1,13 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <h1>{{ speaker.name }}</h1>
+        <h3 ng-show="speaker.twitter"><a href="http://twitter.com/{{ speaker.twitter }}">@{{ speaker.twitter }}</a></h3>
         videos:
         <ul>
-            <li ng-repeat="video in speaker.videos">
-                <a href="#/video/{{ video.id }}">{{ video.title }}</a>
+            <li ng-repeat="element in speaker.videos">
+                <a href="#/video/{{ element.video.id }}">{{ element.video.title }}</a>
                 at
-                <a href="#/event/{{ video.eventId }}">{{ video.event.name }}</a>
+                <a href="#/event/{{ element.event.id }}">{{ element.event.name }}</a>
             </li>
         </ul>
     </div>
