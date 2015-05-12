@@ -1,7 +1,8 @@
 var mockFactory = require('./factory'),
     videos = mockFactory.all.videos(),
     events = mockFactory.all.events(),
-    speakers = mockFactory.all.speakers();
+    speakers = mockFactory.all.speakers(),
+    tags = mockFactory.all.tags();
 
 // http://codevinsky.github.io/development/2013/09/12/lie-to-me/
 myApp.run(function ($httpBackend, $log) {
@@ -28,6 +29,16 @@ myApp.run(function ($httpBackend, $log) {
         return [200, video, {}];
     });
 
+    $httpBackend.whenGET(new RegExp('/tags$')).respond(function (method, url, data) {
+        $log.debug("Getting tags", tags);
+        return [200, tags, {}];
+    });
+
+    $httpBackend.whenGET(new RegExp('/speakers$')).respond(function (method, url, data) {
+        $log.debug("Getting speakers", speakers);
+        return [200, speakers, {}];
+    });
+
     var speakerBySlug = new RegExp('/speakers/([a-z-]+)$');
     $httpBackend.whenGET(speakerBySlug).respond(function (method, url, data) {
         var id = url.match(speakerBySlug)[1];
@@ -36,17 +47,17 @@ myApp.run(function ($httpBackend, $log) {
         return [200, speaker, {}];
     });
 
+    $httpBackend.whenGET(new RegExp('/events$')).respond(function (method, url, data) {
+        $log.debug("Getting events", events);
+        return [200, events, {}];
+    });
+
     var eventBySlug = new RegExp('/events/([a-z0-9-]+)$');
     $httpBackend.whenGET(eventBySlug).respond(function (method, url, data) {
         var id = url.match(eventBySlug)[1];
         var event = _.find(events, function(el){ return el.id === id; });
         $log.debug("Getting event id:", id, event);
         return [200, event, {}];
-    });
-
-    $httpBackend.whenGET(new RegExp('/events$')).respond(function (method, url, data) {
-        $log.debug("Getting events", events);
-        return [200, events, {}];
     });
 
     $httpBackend.whenGET(/\.html$/).passThrough();

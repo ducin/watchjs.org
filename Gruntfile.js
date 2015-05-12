@@ -2,18 +2,20 @@ module.exports = function (grunt) {
 
     var idVideo = 0;
     var examples = require('./node_modules/grunt-json-mapreduce/examples');
+    var _ = require('underscore');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         cfg: {
             paths: {
                 build: 'dist',
-                bower: 'bower_components'
+                bower: 'bower_components',
+                npm: 'node_modules'
             },
             files: {
                 js: {
                     vendor: [
-                        '<%= cfg.paths.bower %>/underscore/underscore.js',
+                        '<%= cfg.paths.npm %>/underscore/underscore.js',
                         '<%= cfg.paths.bower %>/angular/angular.js',
                         '<%= cfg.paths.bower %>/angular-mocks/angular-mocks.js',
                         '<%= cfg.paths.bower %>/angular-route/angular-route.js',
@@ -28,7 +30,7 @@ module.exports = function (grunt) {
                         'app/js/mixins/**/*.js'
                     ],
                     app: [
-                        'app/js/**/*.js', '!app/js/mock/*'
+                        'app/js/app.js', 'app/js/**/*.js', '!app/js/mock/*'
                     ]
                 },
                 css: {
@@ -131,6 +133,25 @@ module.exports = function (grunt) {
                 options: {
                     map: examples.map.pass,
                     reduce: examples.reduce.concat
+                }
+            },
+            tags: {
+                src: ['data/videos/**/*.json'],
+                dest: '<%= cfg.paths.build %>/data/tags.json',
+                options: {
+                    map: function (currentValue, index, array) {
+                        var tagLists = currentValue.map(function (element) {
+                            return element.tags;
+                        });
+                        return _.union.apply(this, tagLists);
+                    },
+                    reduce: function(previousValue, currentValue, index, array) {
+                        if (typeof previousValue === "undefined") {
+                            return currentValue;
+                        } else {
+                            return _.union(previousValue, currentValue);
+                        }
+                    }
                 }
             }
         },

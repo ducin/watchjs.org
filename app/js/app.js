@@ -5,23 +5,9 @@ var myApp = angular.module('myApp', [
     'ngMockE2E',
     'slugifier',
     'youtube-embed'
-]);
-
-myApp.config(function($logProvider){
+]).config(function($logProvider){
     $logProvider.debugEnabled(true);
-});
-
-/*
-myApp.config(['$locationProvider',
-    function($locationProvider) {
-        return $locationProvider.html5Mode({
-            enabled: true
-        });
-    }
-]);
-*/
-
-myApp.config(['$routeProvider',
+}).config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
                 when('/', {
@@ -36,84 +22,45 @@ myApp.config(['$routeProvider',
                     templateUrl: 'templates/contact.html',
                     controller: 'ContactController'
                 }).
+                when('/video/:videoId', {
+                    templateUrl: 'templates/video.html',
+                    controller: 'VideoController'
+                }).
+                when('/tags', {
+                    templateUrl: 'templates/tag-list.html',
+                    controller: 'TagListController'
+                }).
                 when('/tag/:tag', {
                     templateUrl: 'templates/tag.html',
                     controller: 'TagController'
+                }).
+                when('/events', {
+                    templateUrl: 'templates/event-list.html',
+                    controller: 'EventListController'
                 }).
                 when('/event/:eventId', {
                     templateUrl: 'templates/event.html',
                     controller: 'EventController'
                 }).
+                when('/speakers', {
+                    templateUrl: 'templates/speaker-list.html',
+                    controller: 'SpeakerListController'
+                }).
                 when('/speaker/:speakerId', {
                     templateUrl: 'templates/speaker.html',
                     controller: 'SpeakerController'
-                }).
-                when('/video/:videoId', {
-                    templateUrl: 'templates/video.html',
-                    controller: 'VideoController'
                 }).
                 otherwise({
                     redirectTo: '/'
                 });
     }]);
 
-myApp.filter('speaker', function () {
-  return function (input) {
-    return angular.isArray(input) ? _.map(input, function(el){ return el.name }).join(', ') : input.name;
-  };
-});
-
-myApp.controller('MainCtrl', function ($scope, $http) {
-    $http.get('/videos').success(function(data, status, headers, config){
-        $scope.videos = data;
-    });
-});
-
-myApp.controller('HomeController', function ($scope) {
-    $scope.message = "Welcome to watch.js!";
-});
-
-myApp.controller('ContactController', function ($scope) {
-    $scope.message = "Contact watch.js...";
-});
-
-myApp.controller('AboutController', function ($scope) {
-    $scope.message = "About watch.js...";
-});
-
-myApp.controller('VideoController', function ($scope, $http, $log, $routeParams) {
-    $http.get('/videos/' + $routeParams.videoId)
-    .success(function(data, status, headers, config){
-        $scope.video = data;
-    }).error(function(data, status, headers, config){
-        $log.error(arguments);
-    });
-});
-
-myApp.controller('TagController', function ($scope, $http, $log, $routeParams) {
-    $scope.tag = $routeParams.tag;
-    $http.get('/videos?tag=' + $routeParams.tag)
-    .success(function(data, status, headers, config){
-        $scope.videos = data;
-    }).error(function(data, status, headers, config){
-        $log.error(arguments);
-    });
-});
-
-myApp.controller('EventController', function ($scope, $http, $log, $routeParams) {
-    $http.get('/events/' + $routeParams.eventId)
-    .success(function(data, status, headers, config){
-        $scope.event = data;
-    }).error(function(data, status, headers, config){
-        $log.error(arguments);
-    });
-});
-
-myApp.controller('SpeakerController', function ($scope, $http, $log, $routeParams) {
-    $http.get('/speakers/' + $routeParams.speakerId)
-    .success(function(data, status, headers, config){
-        $scope.speaker = data;
-    }).error(function(data, status, headers, config){
-        $log.error(arguments);
-    });
-});
+/*
+myApp.config(['$locationProvider',
+    function($locationProvider) {
+        return $locationProvider.html5Mode({
+            enabled: true
+        });
+    }
+]);
+*/

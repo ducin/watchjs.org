@@ -2,7 +2,8 @@
 
     var rawVideos = _.id2ObjectMap(require('../../../dist/data/videos.json')),
         rawEvents = _.id2ObjectMap(require('../../../dist/data/events.json')),
-        rawSpeakers = _.id2ObjectMap(require('../../../dist/data/speakers.json'));
+        rawSpeakers = _.id2ObjectMap(require('../../../dist/data/speakers.json')),
+        rawTags = require('../../../dist/data/tags.json');
 
     var Factory = {
         canonical: {
@@ -70,6 +71,9 @@
                             .value();
                     return res;
                 });
+            },
+            tags: function() {
+                return rawTags;
             }
         }
     };

@@ -8,7 +8,7 @@ cp CNAME dist/CNAME
 git branch -D gh-pages
 git checkout -b gh-pages
 # gh-pages branch has been dropped and synced with current master
-ls | grep -v -e 'dist' -e 'node_modules' -e 'deploy.sh' | xargs rm -rf
+ls | grep -v -e 'dist' -e 'node_modules' -e 'bower_components' -e 'deploy.sh' | xargs rm -rf
 git rm $(git ls-files --deleted)
 mv dist/* .
 git add .

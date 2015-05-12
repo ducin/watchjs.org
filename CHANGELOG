@@ -1,3 +1,10 @@
+v0.2.2:
+  date: 2015-05-13
+  changes:
+    - Added speaker list page.
+    - Added event list page.
+    - Added tag list page.
+    - Split application .js file.
 v0.2.1:
   date: 2015-05-12
   changes:
