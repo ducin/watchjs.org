@@ -1,8 +1,8 @@
 (function () {
 
-    var rawVideos = _.id2ObjectMap(require('../dist/videos.json')),
-        rawEvents = _.id2ObjectMap(require('../dist/events.json')),
-        rawSpeakers = _.id2ObjectMap(require('../dist/speakers.json'));
+    var rawVideos = _.id2ObjectMap(require('../../../dist/data/videos.json')),
+        rawEvents = _.id2ObjectMap(require('../../../dist/data/events.json')),
+        rawSpeakers = _.id2ObjectMap(require('../../../dist/data/speakers.json'));
 
     var Factory = {
         canonical: {

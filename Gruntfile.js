@@ -7,53 +7,80 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         cfg: {
             paths: {
-                build: 'dist'
+                build: 'dist',
+                bower: 'bower_components'
             },
             files: {
-                vendor: [
-                    'bower_components/underscore/underscore.js',
-                    'bower_components/angular/angular.js',
-                    'bower_components/angular-mocks/angular-mocks.js',
-                    'bower_components/angular-route/angular-route.js',
-                    'bower_components/angular-slugify/angular-slugify.js',
-                    'bower_components/angular-youtube/angular-youtube-player-api.js',
-                    'bower_components/angular-youtube-embed/dist/angular-youtube-embed.js',
-                    'bower_components/jquery/dist/jquery.js',
-                    'bower_components/bootstrap/dist/js/bootstrap.js'
-                ]
+                js: {
+                    vendor: [
+                        '<%= cfg.paths.bower %>/underscore/underscore.js',
+                        '<%= cfg.paths.bower %>/angular/angular.js',
+                        '<%= cfg.paths.bower %>/angular-mocks/angular-mocks.js',
+                        '<%= cfg.paths.bower %>/angular-route/angular-route.js',
+                        '<%= cfg.paths.bower %>/angular-slugify/angular-slugify.js',
+                        '<%= cfg.paths.bower %>/angular-youtube-mb/src/angular-youtube-embed.js',
+//                        '<%= cfg.paths.bower %>/angular-youtube-embed/dist/angular-youtube-embed.js',
+//                        '<%= cfg.paths.bower %>/angular-youtube/angular-youtube-player-api.js',
+                        '<%= cfg.paths.bower %>/jquery/dist/jquery.js',
+                        '<%= cfg.paths.bower %>/bootstrap/dist/js/bootstrap.js'
+                    ],
+                    mixins: [
+                        'app/js/mixins/**/*.js'
+                    ],
+                    app: [
+                        'app/js/**/*.js', '!app/js/mock/*'
+                    ]
+                },
+                css: {
+                    vendor: [
+                        '<%= cfg.paths.bower %>/bootstrap/dist/css/bootstrap.css',
+                        '<%= cfg.paths.bower %>/bootstrap/dist/css/bootstrap-theme.css'
+                    ],
+                    app: [
+                        'app/assets/css/**/*.css'
+                    ]
+                }
             }
         },
         bump: {
             options: {
                 files: ['package.json', 'bower.json'],
-                pushTo: 'origin'
+                pushTo: 'origin',
+                commitFiles: ['-a']
             }
         },
         clean: {
             build: ['<%= cfg.paths.build %>']
         },
         copy: {
-            deps: {
+            static: {
                 files: [{
-                        '<%= cfg.paths.build %>/angular-youtube-embed.min.js': 'js/angular-youtube-embed.min.js',
-                        '<%= cfg.paths.build %>/app.js': 'js/app.js',
-                        '<%= cfg.paths.build %>/underscore-mixins.js': 'js/underscore-mixins.js',
-                        '<%= cfg.paths.build %>/main.css': 'css/main.css',
-                        '<%= cfg.paths.build %>/bootstrap.css': 'bower_components/bootstrap/dist/css/bootstrap.css',
-                        '<%= cfg.paths.build %>/bootstrap-theme.css': 'bower_components/bootstrap/dist/css/bootstrap-theme.css',
-                        '<%= cfg.paths.build %>/index.html': 'index.html',
-                        '<%= cfg.paths.build %>/favicon.png': 'favicon.png'
+                        '<%= cfg.paths.build %>/index.html': 'app/index.html',
+                        '<%= cfg.paths.build %>/favicon.png': 'app/assets/favicon.png'
                     }, {
                         expand: true,
-                        cwd: 'templates/',
+                        cwd: 'app/templates/',
                         src: ["*.*", "**/*.*"],
                         dest: '<%= cfg.paths.build %>/templates'
                     }, {
                         expand: true,
-                        cwd: 'font/',
+                        cwd: 'app/assets/font/',
                         src: ["*.*", "**/*.*"],
                         dest: '<%= cfg.paths.build %>/font'
-                    }]
+                    }
+                ]
+            }
+        },
+        cssmin: {
+            vendor: {
+                files: {
+                    '<%= cfg.paths.build %>/css/vendor.css': '<%= cfg.files.css.vendor %>'
+                }
+            },
+            app: {
+                files: {
+                    '<%= cfg.paths.build %>/css/app.css': '<%= cfg.files.css.app %>'
+                }
             }
         },
         uglify: {
@@ -61,14 +88,25 @@ module.exports = function (grunt) {
                 mangle: false
             },
             vendor: {
-                src: '<%= cfg.files.vendor %>',
-                dest: '<%= cfg.paths.build %>/vendor.js'
+                files: {
+                    '<%= cfg.paths.build %>/js/vendor.js': '<%= cfg.files.js.vendor %>'
+                }
+            },
+            mixins: {
+                files: {
+                    '<%= cfg.paths.build %>/js/mixins.js': '<%= cfg.files.js.mixins %>'
+                }
+            },
+            app: {
+                files: {
+                    '<%= cfg.paths.build %>/js/app.js': '<%= cfg.files.js.app %>'
+                }
             }
         },
         json_mapreduce: {
             events: {
                 src: ['data/events/**/*.json'],
-                dest: '<%= cfg.paths.build %>/events.json',
+                dest: '<%= cfg.paths.build %>/data/events.json',
                 options: {
                     map: examples.map.pass,
                     reduce: examples.reduce.concat
@@ -76,7 +114,7 @@ module.exports = function (grunt) {
             },
             videos: {
                 src: ['data/videos/**/*.json'],
-                dest: '<%= cfg.paths.build %>/videos.json',
+                dest: '<%= cfg.paths.build %>/data/videos.json',
                 options: {
                     map: function (currentValue, index, array) {
                         return currentValue.map(function (element) {
@@ -89,7 +127,7 @@ module.exports = function (grunt) {
             },
             speakers: {
                 src: ['data/speakers/**/*.json'],
-                dest: '<%= cfg.paths.build %>/speakers.json',
+                dest: '<%= cfg.paths.build %>/data/speakers.json',
                 options: {
                     map: examples.map.pass,
                     reduce: examples.reduce.concat
@@ -98,13 +136,26 @@ module.exports = function (grunt) {
         },
         browserify: {
             app: {
-                src: ['./js/mock.js'],
-                dest: '<%= cfg.paths.build %>/mock.js'
+                src: ['./app/js/mock/index.js'],
+                dest: '<%= cfg.paths.build %>/js/mock.js'
             }
         }
     });
+
     require('load-grunt-tasks')(grunt);
 
-    grunt.registerTask('build', ['clean', 'json_mapreduce', 'browserify', 'copy', 'uglify']);
+    grunt.registerTask('mock', [
+        'json_mapreduce',
+        'browserify'
+    ]);
+
+    grunt.registerTask('build', [
+        'clean',
+        'mock',
+        'copy',
+        'cssmin',
+        'uglify'
+    ]);
+
     grunt.registerTask('default', ['build']);
 };

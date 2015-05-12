@@ -11,7 +11,7 @@
         <div>
             tags:
             <span ng-repeat="tag in video.tags">
-                {{ tag }}
+                <a href="#/tag/{{ tag }}">{{ tag }}</a>{{$last ? '' : ', '}}
             </span>
         </div>
     </div>

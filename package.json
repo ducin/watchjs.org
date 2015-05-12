@@ -1,6 +1,6 @@
 {
   "name": "watch.js",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "authors": [
     "Tomasz Ducin <tomasz.ducin@gmail.com>"
   ],
@@ -22,6 +22,7 @@
     "grunt-bump": "^0.3.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.12.3",
     "grunt-contrib-uglify": "^0.8.0",
     "grunt-json-mapreduce": "^0.1.5",
     "load-grunt-tasks": "^3.1.0"

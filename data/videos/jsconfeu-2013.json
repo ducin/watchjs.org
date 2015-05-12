@@ -6,6 +6,7 @@
             "addy-osmani"
         ],
         "tags": [
+            "object-observe",
             "ecmascript"
         ],
         "eventId": "jsconf-eu-2013"
@@ -28,7 +29,9 @@
             "forbes-lindesay"
         ],
         "tags": [
-            "javascript"
+            "promises",
+            "generators",
+            "ecmascript"
         ],
         "eventId": "jsconf-eu-2013"
     },

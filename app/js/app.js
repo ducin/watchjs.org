@@ -1,4 +1,15 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngMockE2E', 'slugifier', 'youtube-embed']);
+/* global angular: false */
+
+var myApp = angular.module('myApp', [
+    'ngRoute',
+    'ngMockE2E',
+    'slugifier',
+    'youtube-embed'
+]);
+
+myApp.config(function($logProvider){
+    $logProvider.debugEnabled(true);
+});
 
 /*
 myApp.config(['$locationProvider',
@@ -24,6 +35,10 @@ myApp.config(['$routeProvider',
                 when('/contact', {
                     templateUrl: 'templates/contact.html',
                     controller: 'ContactController'
+                }).
+                when('/tag/:tag', {
+                    templateUrl: 'templates/tag.html',
+                    controller: 'TagController'
                 }).
                 when('/event/:eventId', {
                     templateUrl: 'templates/event.html',
@@ -54,6 +69,18 @@ myApp.controller('MainCtrl', function ($scope, $http) {
     });
 });
 
+myApp.controller('HomeController', function ($scope) {
+    $scope.message = "Welcome to watch.js!";
+});
+
+myApp.controller('ContactController', function ($scope) {
+    $scope.message = "Contact watch.js...";
+});
+
+myApp.controller('AboutController', function ($scope) {
+    $scope.message = "About watch.js...";
+});
+
 myApp.controller('VideoController', function ($scope, $http, $log, $routeParams) {
     $http.get('/videos/' + $routeParams.videoId)
     .success(function(data, status, headers, config){
@@ -63,8 +90,14 @@ myApp.controller('VideoController', function ($scope, $http, $log, $routeParams)
     });
 });
 
-myApp.controller('HomeController', function ($scope) {
-    $scope.message = "Welcome to watch.js!";
+myApp.controller('TagController', function ($scope, $http, $log, $routeParams) {
+    $scope.tag = $routeParams.tag;
+    $http.get('/videos?tag=' + $routeParams.tag)
+    .success(function(data, status, headers, config){
+        $scope.videos = data;
+    }).error(function(data, status, headers, config){
+        $log.error(arguments);
+    });
 });
 
 myApp.controller('EventController', function ($scope, $http, $log, $routeParams) {
@@ -83,12 +116,4 @@ myApp.controller('SpeakerController', function ($scope, $http, $log, $routeParam
     }).error(function(data, status, headers, config){
         $log.error(arguments);
     });
-});
-
-myApp.controller('ContactController', function ($scope) {
-    $scope.message = "About watch.js...";
-});
-
-myApp.controller('AboutController', function ($scope) {
-    $scope.message = "About watch.js...";
 });

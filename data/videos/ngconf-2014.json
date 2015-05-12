@@ -7,7 +7,8 @@
             "brad-green"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "keynote"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -42,7 +43,9 @@
             "christian-lilley"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "promises",
+            "design-patterns"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -53,7 +56,8 @@
             "dave-smith"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "directives"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -86,7 +90,8 @@
             "ben-teese"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "models"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -109,7 +114,8 @@
             "vojta-jina"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "design-patterns"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -120,7 +126,9 @@
             "julie-ralph"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "testing",
+            "protractor"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -131,7 +139,8 @@
             "sean-hess"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "typescript"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -142,7 +151,8 @@
             "anant-narayanan"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "firebase"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -153,7 +163,8 @@
             "thomas-burleson"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "require"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -164,7 +175,8 @@
             "ben-clinkinbeard"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "browserify"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -175,7 +187,8 @@
             "daniel-zen"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "mobile"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -186,7 +199,8 @@
             "ari-lerner"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "hardware"
         ],
         "eventId": "ng-conf-2014"
     },
@@ -197,7 +211,8 @@
             "karl-seamon"
         ],
         "tags": [
-            "angular"
+            "angular",
+            "performance"
         ],
         "eventId": "ng-conf-2014"
     }
