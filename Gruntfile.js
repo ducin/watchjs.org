@@ -210,6 +210,5 @@ module.exports = function (grunt) {
         'test',
         'build',
         'mock',
-        'run'
     ]);
 };
