@@ -160,10 +160,28 @@ module.exports = function (grunt) {
                 src: ['./app/js/mock/index.js'],
                 dest: '<%= cfg.paths.build %>/js/mock.js'
             }
+        },
+        jsonlint: {
+            data: {
+                src: ['data/**/*.json']
+            }
+        },
+        jshint: {
+            options: {
+                jshintrc: true
+            },
+            app: {
+                src: ['app/js/**/*.js']
+            }
         }
     });
 
     require('load-grunt-tasks')(grunt);
+
+    grunt.registerTask('test', [
+        'jshint',
+        'jsonlint'
+    ]);
 
     grunt.registerTask('mock', [
         'json_mapreduce',
@@ -178,5 +196,8 @@ module.exports = function (grunt) {
         'uglify'
     ]);
 
-    grunt.registerTask('default', ['build']);
+    grunt.registerTask('default', [
+        'test',
+        'build'
+    ]);
 };

@@ -1,3 +1,5 @@
+'use strict';
+
 _.mixin({
     id2ObjectMap: function (list) {
         return _.chain(list)

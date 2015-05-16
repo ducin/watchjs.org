@@ -1,6 +1,6 @@
-/* global angular: false */
+'use strict';
 
-var myApp = angular.module('myApp', [
+global.myApp = angular.module('myApp', [
     'ngRoute',
     'ngMockE2E',
     'slugifier',

@@ -1,3 +1,5 @@
+'use strict';
+
 var mockFactory = require('./factory'),
     videos = mockFactory.all.videos(),
     events = mockFactory.all.events(),
@@ -5,9 +7,9 @@ var mockFactory = require('./factory'),
     tags = mockFactory.all.tags();
 
 // http://codevinsky.github.io/development/2013/09/12/lie-to-me/
-myApp.run(function ($httpBackend, $log) {
+global.myApp.run(function ($httpBackend, $log) {
     $httpBackend.whenGET(new RegExp('/videos$')).respond(function (method, url, data) {
-        $log.debug("Getting videos", videos);
+        $log.debug('Getting videos', videos);
         return [200, videos, {}];
     });
 
@@ -17,7 +19,7 @@ myApp.run(function ($httpBackend, $log) {
         var result = _.filter(videos, function(el){
             return _.contains(el.tags, tag);
         });
-        $log.debug("Getting videos by tag:", tag, result);
+        $log.debug('Getting videos by tag:', tag, result);
         return [200, result, {}];
     });
 
@@ -25,17 +27,17 @@ myApp.run(function ($httpBackend, $log) {
     $httpBackend.whenGET(videoById).respond(function (method, url, data) {
         var id = url.match(videoById)[1];
         var video = videos[id - 1];
-        $log.debug("Getting video id:", id, video);
+        $log.debug('Getting video id:', id, video);
         return [200, video, {}];
     });
 
     $httpBackend.whenGET(new RegExp('/tags$')).respond(function (method, url, data) {
-        $log.debug("Getting tags", tags);
+        $log.debug('Getting tags', tags);
         return [200, tags, {}];
     });
 
     $httpBackend.whenGET(new RegExp('/speakers$')).respond(function (method, url, data) {
-        $log.debug("Getting speakers", speakers);
+        $log.debug('Getting speakers', speakers);
         return [200, speakers, {}];
     });
 
@@ -43,12 +45,12 @@ myApp.run(function ($httpBackend, $log) {
     $httpBackend.whenGET(speakerBySlug).respond(function (method, url, data) {
         var id = url.match(speakerBySlug)[1];
         var speaker = _.find(speakers, function(el){ return el.id === id; });
-        $log.debug("Getting speaker id:", id, speaker);
+        $log.debug('Getting speaker id:', id, speaker);
         return [200, speaker, {}];
     });
 
     $httpBackend.whenGET(new RegExp('/events$')).respond(function (method, url, data) {
-        $log.debug("Getting events", events);
+        $log.debug('Getting events', events);
         return [200, events, {}];
     });
 
@@ -56,7 +58,7 @@ myApp.run(function ($httpBackend, $log) {
     $httpBackend.whenGET(eventBySlug).respond(function (method, url, data) {
         var id = url.match(eventBySlug)[1];
         var event = _.find(events, function(el){ return el.id === id; });
-        $log.debug("Getting event id:", id, event);
+        $log.debug('Getting event id:', id, event);
         return [200, event, {}];
     });
 

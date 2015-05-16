@@ -1,3 +1,5 @@
+'use strict';
+
 (function () {
 
     var rawVideos = _.id2ObjectMap(require('../../../dist/data/videos.json')),
@@ -46,7 +48,7 @@
                                 return {
                                     video: Factory.canonical.video(video),
                                     speakers: _.map(video.speakerIds, function(speakerId){
-                                        return Factory.canonical.speaker(rawSpeakers[speakerId])
+                                        return Factory.canonical.speaker(rawSpeakers[speakerId]);
                                     })
                                 };
                             })
