@@ -19,9 +19,10 @@
     "smarttabs": true,
     "multistr": true,
     "globals": {
-        "angular": true,
-        "require": true,
-        "module": true,
-        "_": true
+        "angular": false,
+        "require": false,
+        "module": false,
+        "_": false,
+        "myApp": true
     }
 }

@@ -7,7 +7,7 @@ var mockFactory = require('./factory'),
     tags = mockFactory.all.tags();
 
 // http://codevinsky.github.io/development/2013/09/12/lie-to-me/
-global.myApp.run(function ($httpBackend, $log) {
+myApp.run(function ($httpBackend, $log) {
     $httpBackend.whenGET(new RegExp('/videos$')).respond(function (method, url, data) {
         $log.debug('Getting videos', videos);
         return [200, videos, {}];

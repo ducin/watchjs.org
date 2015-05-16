@@ -161,6 +161,13 @@ module.exports = function (grunt) {
                 dest: '<%= cfg.paths.build %>/js/mock.js'
             }
         },
+        'http-server': {
+            dist: {
+                root: 'dist',
+                host: '0.0.0.0',
+                port: '9000'
+            }
+        },
         jsonlint: {
             data: {
                 src: ['data/**/*.json']
@@ -183,21 +190,26 @@ module.exports = function (grunt) {
         'jsonlint'
     ]);
 
-    grunt.registerTask('mock', [
-        'json_mapreduce',
-        'browserify'
-    ]);
-
     grunt.registerTask('build', [
         'clean',
-        'mock',
         'copy',
         'cssmin',
         'uglify'
     ]);
 
+    grunt.registerTask('mock', [
+        'json_mapreduce',
+        'browserify'
+    ]);
+
+    grunt.registerTask('run', [
+        'http-server'
+    ]);
+
     grunt.registerTask('default', [
         'test',
-        'build'
+        'build',
+        'mock',
+        'run'
     ]);
 };

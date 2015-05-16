@@ -1,12 +1,17 @@
 'use strict';
 
-global.myApp = angular.module('myApp', [
+var config = {
+    debugEnabled: true,
+    html5ModeEnabled: false
+};
+
+var myApp = angular.module('myApp', [
     'ngRoute',
     'ngMockE2E',
     'slugifier',
     'youtube-embed'
 ]).config(function($logProvider){
-    $logProvider.debugEnabled(true);
+    $logProvider.debugEnabled(config.debugEnabled);
 }).config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
@@ -53,14 +58,11 @@ global.myApp = angular.module('myApp', [
                 otherwise({
                     redirectTo: '/'
                 });
-    }]);
-
-/*
-myApp.config(['$locationProvider',
+    }
+]).config(['$locationProvider',
     function($locationProvider) {
         return $locationProvider.html5Mode({
-            enabled: true
+            enabled: config.html5ModeEnabled
         });
     }
 ]);
-*/
