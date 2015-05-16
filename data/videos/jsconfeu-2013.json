@@ -128,6 +128,7 @@
         "videoId": "e9httij2RG0",
         "title": "Streaming Algorithms in Javascript and Node.js",
         "tags": [
+            "streaming",
             "algorithm",
             "javascript",
             "node.js"
@@ -157,6 +158,76 @@
         ],
         "speakerIds": [
             "alex-feyerke"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "9Q4L9XQ7qdo",
+        "title": "A Symphony Of Sound, Gone Mobile",
+        "tags": [
+            "audio",
+            "mobile"
+        ],
+        "speakerIds": [
+            "nic-da-costa"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "7nnAYB1mb9E",
+        "title": "The web experience in the autistic spectrum",
+        "tags": [
+            "community",
+            "user-interface"
+        ],
+        "speakerIds": [
+            "natalia-berdys"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "aIFaAkHFLxA",
+        "title": "The hitchhikers guide to UXing without a UXer",
+        "tags": [
+            "user-interface"
+        ],
+        "speakerIds": [
+            "chrissy-welsh"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "8skJbjEh9SY",
+        "title": "HTML5 audio sprites -- Holy Grail or Programmers Hell",
+        "tags": [
+            "audio",
+            "html5",
+            "performance"
+        ],
+        "speakerIds": [
+            "michal-biniek"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "NjMOSg5Pe44",
+        "title": "Javascript Crypto. Ugly duckling with good reason?",
+        "tags": [
+            "cryptography"
+        ],
+        "speakerIds": [
+            "martin-bosslet"
+        ],
+        "eventId": "jsconf-eu-2013"
+    },
+    {
+        "videoId": "k44lq8ImleE",
+        "title": "Sagascript - JS at the forefront of emerging storytelling",
+        "tags": [
+            "community"
+        ],
+        "speakerIds": [
+            "astrid-bin"
         ],
         "eventId": "jsconf-eu-2013"
     }

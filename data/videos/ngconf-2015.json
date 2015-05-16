@@ -1,7 +1,7 @@
 [
     {
         "videoId": "QHulaj5ZxbI",
-        "title": "NG-Conf 2015 Keynote",
+        "title": "NG-Conf 2015 Keynote Day 1",
         "speakerIds": [
             "brad-green",
             "igor-minar"
@@ -9,6 +9,42 @@
         "tags": [
             "angular",
             "keynote"
+        ],
+        "eventId": "ng-conf-2015"
+    },
+    {
+        "videoId": "-dMBcqwvYA0",
+        "title": "NG-Conf 2015 Keynote Day 2",
+        "speakerIds": [
+            "rado-kirov"
+        ],
+        "tags": [
+            "angular",
+            "keynote"
+        ],
+        "eventId": "ng-conf-2015"
+    },
+    {
+        "videoId": "ihAeffWJEIc",
+        "title": "State of Angular 1",
+        "speakerIds": [
+            "pawel-kozlowski",
+            "lucas-galfaso"
+        ],
+        "tags": [
+            "angular"
+        ],
+        "eventId": "ng-conf-2015"
+    },
+    {
+        "videoId": "M_Wp-2XA9ZU",
+        "title": "ng-wat",
+        "speakerIds": [
+            "shai-reznik"
+        ],
+        "tags": [
+            "angular",
+            "documentation"
         ],
         "eventId": "ng-conf-2015"
     }

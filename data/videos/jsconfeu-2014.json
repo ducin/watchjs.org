@@ -14,7 +14,7 @@
         "videoId": "SmZ9XcTpMS4",
         "title": "The ServiceWorker is coming, look busy",
         "tags": [
-            "javascript"
+            "service-worker"
         ],
         "speakerIds": [
             "jake-archibald"
@@ -25,7 +25,8 @@
         "videoId": "8aGhZQkoFbQ",
         "title": "What the heck is the event loop anyway?",
         "tags": [
-            "javascript"
+            "javascript",
+            "event-loop"
         ],
         "speakerIds": [
             "philip-roberts"
@@ -36,10 +37,146 @@
         "videoId": "sS5EByZm1EI",
         "title": "Got Make?",
         "tags": [
-            "javascript"
+            "automation"
         ],
         "speakerIds": [
             "rob-ashton"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "cqtBpCqgOgM",
+        "title": "Using the web for music production and for live performances",
+        "tags": [
+            "audio"
+        ],
+        "speakerIds": [
+            "jan-monschke"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "v34CEyqVEuM",
+        "title": "JavaScript Level 9000",
+        "tags": [
+            "javascript"
+        ],
+        "speakerIds": [
+            "christoph-martens"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "X2ZlDrx6dAw",
+        "title": "Web-based data visualization on mobile devices",
+        "tags": [
+            "mobile",
+            "html5",
+            "visualization"
+        ],
+        "speakerIds": [
+            "dominikus-baur"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "QX0eauXBKwc",
+        "title": "We Will All Be Game Programmers",
+        "tags": [
+            "games"
+        ],
+        "speakerIds": [
+            "hunter-loftis"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "d1HM-9reFAE",
+        "title": "The Meaning of Words",
+        "tags": [
+            "language"
+        ],
+        "speakerIds": [
+            "stephan-seidt"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "-thLNvxFUu4",
+        "title": "This is bigger than us: Building a future for Open Source",
+        "tags": [
+            "community"
+        ],
+        "speakerIds": [
+            "lena-reinhard"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "xSIt6h_yjH0",
+        "title": "Secure Crypto for Browser Based Apps",
+        "tags": [
+            "cryptography"
+        ],
+        "speakerIds": [
+            "brennan-novak"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "tia6iP85Zuk",
+        "title": "Nerd Disco",
+        "tags": [
+            "audio",
+            "node.js"
+        ],
+        "speakerIds": [
+            "tim-pietrusky"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "XcS-LdEBUkE",
+        "title": "Practical functional programming: pick two",
+        "tags": [
+            "functional"
+        ],
+        "speakerIds": [
+            "james-coglan"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "F2cL4EOAztk",
+        "title": "JavaScript in JavaScript: Inception",
+        "tags": [
+            "language"
+        ],
+        "speakerIds": [
+            "adrian-perez-de-castro"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "Ls27mCiYsQo",
+        "title": "Parallel JavaScript",
+        "tags": [
+            "hardware",
+            "language"
+        ],
+        "speakerIds": [
+            "jaswanth-sreeram"
+        ],
+        "eventId": "jsconf-eu-2014"
+    },
+    {
+        "videoId": "_A_FdbTkp9c",
+        "title": "Why are there so many Javascript charting libraries?!?",
+        "tags": [
+            "data-visualization"
+        ],
+        "speakerIds": [
+            "dan-mane"
         ],
         "eventId": "jsconf-eu-2014"
     }

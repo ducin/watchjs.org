@@ -19,7 +19,9 @@
         "tags": [
             "yeoman",
             "bower",
-            "grunt"
+            "grunt",
+            "node.js",
+            "automation"
         ],
         "eventId": "gdg-tel-aviv"
     }

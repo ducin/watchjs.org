@@ -6,8 +6,225 @@
             "karolina-szczur"
         ],
         "tags": [
-            "jquery"
+            "jquery",
+            "css"
         ],
         "eventId": "jsconf-eu-2012"
+    },
+    {
+        "videoId": "3UTIcQYQ8Rw",
+        "title": "Introducing TypeScript",
+        "speakerIds": [
+            "anders-heijlsberg",
+            "luke-hoban"
+        ],
+        "tags": [
+            "typescript"
+        ],
+        "eventId": "jsconf-eu-2012"
+    },
+    {
+        "videoId": "NBZCZ57mTUc",
+        "title": "JavaScript on the Raspberry Pi",
+        "speakerIds": [
+            "thomas-kroeber"
+        ],
+        "tags": [
+            "hardware"
+        ],
+        "eventId": "jsconf-eu-2012"
+    },
+    {
+        "videoId": "mYQNEaOfqGI",
+        "title": "WebRTC: Real-time communication without plugins",
+        "speakerIds": [
+            "sam-dutton"
+        ],
+        "tags": [
+            "WebRTC",
+            "real-time"
+        ],
+        "eventId": "jsconf-eu-2012"
+    },
+    {
+        "videoId": "qzJ0hn1mHOw",
+        "title": "Improvisational JavaScript",
+        "speakerIds": [
+            "garann-means"
+        ],
+        "tags": [
+            "exceptions"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "y4lBEZTThvg",
+        "title": "iframes: A look in to the black heart of the browsers",
+        "speakerIds": [
+            "remy-sharp"
+        ],
+        "tags": [
+            "iframe"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "ZhshEZIV2F4",
+        "title": "The Footprint of Performance",
+        "speakerIds": [
+            "michael-starzinger"
+        ],
+        "tags": [
+            "performance"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "cT9f-04K6JI",
+        "title": "Don't dream - make the WebAPI of your dreams become real!",
+        "speakerIds": [
+            "julian-viereck"
+        ],
+        "tags": [
+            "browser-api"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "NyClWddeO_A",
+        "title": "JavaScript inheritance: beyond the basics",
+        "speakerIds": [
+            "axel-rauschmayer"
+        ],
+        "tags": [
+            "javascript",
+            "inheritance"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "qDZ5Ku6whi0",
+        "title": "A programming language for children",
+        "speakerIds": [
+            "mary-rose-cook"
+        ],
+        "tags": [
+            "community"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "wwheL5TP_vE",
+        "title": "IcedCoffeeScript",
+        "speakerIds": [
+            "max-krohn"
+        ],
+        "tags": [
+            "coffeescript"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "e7-ZnHMDZto",
+        "title": "Because F$%k Photoshop",
+        "speakerIds": [
+            "julie-ann-horvath"
+        ],
+        "tags": [
+            "assets"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "d-xVOke3ync",
+        "title": "JavaScript as a compilation target - Making it fast",
+        "speakerIds": [
+            "florian-loitsch"
+        ],
+        "tags": [
+            "dart",
+            "compilation",
+            "performance"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "PtD-WKSC6ak",
+        "title": "Faster JavaScript with Category Theory",
+        "speakerIds": [
+            "john-bender"
+        ],
+        "tags": [
+            "jquery",
+            "performance"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "uXS_-JRsB8M",
+        "title": "Client Side Internationalization",
+        "speakerIds": [
+            "alex-sexton"
+        ],
+        "tags": [
+            "i18n"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "zgt-jNqbxF8",
+        "title": "Code Collage",
+        "speakerIds": [
+            "james-halliday"
+        ],
+        "tags": [
+            "design-patterns",
+            "modules"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "MFtijdklZDo",
+        "title": "Break all the rules",
+        "speakerIds": [
+            "angus-croll"
+        ],
+        "tags": [
+            "vanilla"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "PN8Eg1K9xjE",
+        "title": "JavaScript is the new Punk Rock",
+        "speakerIds": [
+            "stuart-memo"
+        ],
+        "tags": [
+            "audio"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "JNjnv-Gcpnw",
+        "title": "Inspector Web and the Mystery of the Shadow DOM",
+        "speakerIds": [
+            "angelina-fabbro"
+        ],
+        "tags": [
+            "shadow-dom"
+        ],
+        "eventId": "jsconfeu-2012"
+    },
+    {
+        "videoId": "3ujq55fCx6o",
+        "title": "Why functional is the new black",
+        "speakerIds": [
+            "elise-huard"
+        ],
+        "tags": [
+            "functional"
+        ],
+        "eventId": "jsconfeu-2012"
     }
 ]

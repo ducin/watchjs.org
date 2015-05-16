@@ -9,8 +9,16 @@
         "twitter": "addyosmani"
     },
     {
+        "id": "adrian-perez-de-castro",
+        "name": "Adrian Perez de Castro"
+    },
+    {
         "id": "alex-feyerke",
         "name": "Alex Feyerke"
+    },
+    {
+        "id": "alex-sexton",
+        "name": "Alex Sexton"
     },
     {
         "id": "allen-pike",
@@ -21,13 +29,29 @@
         "name": "Anant Narayanan"
     },
     {
+        "id": "anders-heijlsberg",
+        "name": "Anders Heijlsberg"
+    },
+    {
         "id": "angelina-fabbro",
         "name": "Angelina Fabbro",
         "twitter": "hopefulcyborg"
     },
     {
+        "id": "angus-croll",
+        "name": "Angus Croll"
+    },
+    {
         "id": "ari-lerner",
         "name": "Ari Lerner"
+    },
+    {
+        "id": "astrid-bin",
+        "name": "Astrid Bin"
+    },
+    {
+        "id": "axel-rauschmayer",
+        "name": "Axel Rauschmayer"
     },
     {
         "id": "ben-clinkinbeard",
@@ -48,8 +72,16 @@
         "twitter": "BrendanEich"
     },
     {
+        "id": "brennan-novak",
+        "name": "Brennan Novak"
+    },
+    {
         "id": "charlie-crane",
         "name": "Charlie Crane"
+    },
+    {
+        "id": "chrissy-welsh",
+        "name": "Chrissy Welsh"
     },
     {
         "id": "christian-kvalheim",
@@ -58,6 +90,14 @@
     {
         "id": "christian-lilley",
         "name": "Christian Lilley"
+    },
+    {
+        "id": "christoph-martens",
+        "name": "Christoph Martens"
+    },
+    {
+        "id": "dan-mane",
+        "name": "Dan Mané"
     },
     {
         "id": "dan-wahlin",
@@ -72,8 +112,36 @@
         "name": "Dave Smith"
     },
     {
+        "id": "domenic-denicola",
+        "name": "Domenic Denicola"
+    },
+    {
+        "id": "dominikus-baur",
+        "name": "Dominikus Baur"
+    },
+    {
+        "id": "elise-huard",
+        "name": "Elise Huard"
+    },
+    {
+        "id": "filip-maj",
+        "name": "Filip Maj"
+    },
+    {
+        "id": "florian-loitsch",
+        "name": "Florian Loitsch"
+    },
+    {
         "id": "forbes-lindesay",
         "name": "Forbes Lindesay"
+    },
+    {
+        "id": "garann-means",
+        "name": "Garann Means"
+    },
+    {
+        "id": "hunter-loftis",
+        "name": "Hunter Loftis"
     },
     {
         "id": "ido-sela",
@@ -89,6 +157,26 @@
         "twitter": "jaffathecake"
     },
     {
+        "id": "james-coglan",
+        "name": "James Coglan"
+    },
+    {
+        "id": "james-halliday",
+        "name": "James Halliday"
+    },
+    {
+        "id": "jan-monschke",
+        "name": "Jan Monschke"
+    },
+    {
+        "id": "jaswanth-sreeram",
+        "name": "Jaswanth Sreeram"
+    },
+    {
+        "id": "jed-schmidt",
+        "name": "Jed Schmidt"
+    },
+    {
         "id": "jeff-cross",
         "name": "Jeff Cross"
     },
@@ -97,12 +185,24 @@
         "name": "Jeremy Elbourn"
     },
     {
+        "id": "john-bender",
+        "name": "John Bender"
+    },
+    {
+        "id": "john-david-dalton",
+        "name": "John David Dalton"
+    },
+    {
         "id": "john-papa",
         "name": "John Papa"
     },
     {
         "id": "julian-viereck",
         "name": "Julian Viereck"
+    },
+    {
+        "id": "julie-ann-horvath",
+        "name": "Julie Ann Horvath"
     },
     {
         "id": "julie-ralph",
@@ -121,6 +221,18 @@
         "name": "Karolina Szczur"
     },
     {
+        "id": "lena-reinhard",
+        "name": "Lena Reinhard"
+    },
+    {
+        "id": "lucas-galfaso",
+        "name": "Lucas Galfaso"
+    },
+    {
+        "id": "luke-hoban",
+        "name": "Luke Hoban"
+    },
+    {
         "id": "marcy-sutton",
         "name": "Marcy Sutton"
     },
@@ -129,13 +241,53 @@
         "name": "Martha Girdler"
     },
     {
+        "id": "martin-bosslet",
+        "name": "Martin Boßlet"
+    },
+    {
+        "id": "mary-rose-cook",
+        "name": "Mary Rose Cook"
+    },
+    {
+        "id": "max-krohn",
+        "name": "Max Krohn"
+    },
+    {
+        "id": "michael-brooks",
+        "name": "Michael Brooks"
+    },
+    {
+        "id": "michael-starzinger",
+        "name": "Michael Starzinger"
+    },
+    {
+        "id": "michal-biniek",
+        "name": "Michał Biniek"
+    },
+    {
         "id": "misko-hevery",
         "name": "Miško Hevery",
         "twitter": "mhevery"
     },
     {
+        "id": "natalia-berdys",
+        "name": "Natalia Berdys"
+    },
+    {
+        "id": "nic-da-costa",
+        "name": "Nic da Costa"
+    },
+    {
+        "id": "pawel-kozlowski",
+        "name": "Paweł Kozłowski"
+    },
+    {
         "id": "pete-hunt",
         "name": "Pete Hunt"
+    },
+    {
+        "id": "peter-flynn",
+        "name": "Peter Flynn"
     },
     {
         "id": "philip-roberts",
@@ -146,12 +298,32 @@
         "name": "Rachel Dale"
     },
     {
+        "id": "rado-kirov",
+        "name": "Rado Kirov"
+    },
+    {
+        "id": "ray-daly",
+        "name": "Ray Daly"
+    },
+    {
+        "id": "remy-sharp",
+        "name": "Remy Sharp"
+    },
+    {
         "id": "rob-ashton",
         "name": "Rob Ashton"
     },
     {
+        "id": "sam-dutton",
+        "name": "Sam Dutton"
+    },
+    {
         "id": "sara-chipps",
         "name": "Sara Chipps"
+    },
+    {
+        "id": "sara-robinson",
+        "name": "Sara Robinson"
     },
     {
         "id": "sean-hess",
@@ -166,8 +338,24 @@
         "name": "Simon Tennant"
     },
     {
+        "id": "stephan-seidt",
+        "name": "Stephan Seidt"
+    },
+    {
+        "id": "stuart-memo",
+        "name": "Stuart Memo"
+    },
+    {
         "id": "thomas-burleson",
         "name": "Thomas Burleson"
+    },
+    {
+        "id": "thomas-kroeber",
+        "name": "Thomas Kroeber"
+    },
+    {
+        "id": "tim-pietrusky",
+        "name": "Tim Pietrusky"
     },
     {
         "id": "vojta-jina",
