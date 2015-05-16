@@ -1,7 +1,7 @@
 <p>JavaScript tags</p>
 <hr />
 <ul ng-repeat="tag in tags">
-    <li><a href="#/tag/{{ ::tag.name }}">
+    <li ng-if="tag.videoCount"><a href="#/tag/{{ ::tag.name }}">
         {{ ::tag.name }} (<i>{{ ::tag.videoCount }}</i>)
     </a></li>
 </ul>

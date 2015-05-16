@@ -1,7 +1,7 @@
 <p>JavaScript speakers</p>
 <hr />
 <ul ng-repeat="speaker in speakers">
-    <li><a href="#/speaker/{{ ::speaker.id}}">
+    <li ng-if="speaker.videoCount"><a href="#/speaker/{{ ::speaker.id}}">
         {{ ::speaker.name}} (<i>{{ ::speaker.videoCount }}</i>)
     </a></li>
 </ul>
