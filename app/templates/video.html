@@ -7,7 +7,11 @@
             </span>
             at <a href="#/event/{{ video.event.id }}">{{ video.event.name }}</a>
         </h3>
-        <youtube-video video-id="video.videoId"></youtube-video>
+
+        <div class="video-container">
+            <youtube-video video-id="video.videoId"></youtube-video>
+        </div>
+
         <div>
             tags:
             <span ng-repeat="tag in video.tags">
