@@ -1,12 +1,12 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        <h1>{{ event.name }}</h1>
+        <h1>{{ ::event.name }}</h1>
         videos:
         <ul>
             <li ng-repeat="element in event.videos">
-                <a href="#/video/{{ element.video.id }}">{{ element.video.title }}</a>
+                <a href="#/video/{{ ::element.video.id }}">{{ ::element.video.title }}</a>
                 by <span ng-repeat="speaker in element.speakers">
-                    <a href="#/speaker/{{ speaker.id }}">{{ speaker.name }}</a>{{$last ? '' : ', '}}
+                    <a href="#/speaker/{{ ::speaker.id }}">{{ ::speaker.name }}</a>{{$last ? '' : ', '}}
                 </span>
             </li>
         </ul>

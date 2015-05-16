@@ -2,10 +2,10 @@
     <p>{{ message }}</p>
     <hr />
     <ul ng-repeat="video in videos">
-        <li><a href="#/video/{{ video.id }}">
-            {{ video.title }}
+        <li><a href="#/video/{{ ::video.id }}">
+            {{ ::video.title }}
             <br />
-            <i>(<span ng-repeat="speaker in video.speakers">{{ speaker.name }}{{$last ? '' : ', '}}</span>)</i>
+            <i>(<span ng-repeat="speaker in video.speakers">{{ ::speaker.name }}{{$last ? '' : ', '}}</span>)</i>
         </a></li>
     </ul>
 </div>

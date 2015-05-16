@@ -1,11 +1,11 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        <h1>{{ video.title }}</h1>
+        <h1>{{ ::video.title }}</h1>
         <h3>
             by <span ng-repeat="speaker in video.speakers">
-                <a href="#/speaker/{{ speaker.id }}">{{ speaker.name }}</a>{{$last ? '' : ', '}}
+                <a href="#/speaker/{{ ::speaker.id }}">{{ ::speaker.name }}</a>{{$last ? '' : ', '}}
             </span>
-            at <a href="#/event/{{ video.event.id }}">{{ video.event.name }}</a>
+            at <a href="#/event/{{ ::video.event.id }}">{{ ::video.event.name }}</a>
         </h3>
 
         <div class="video-container">
@@ -15,7 +15,7 @@
         <div>
             tags:
             <span ng-repeat="tag in video.tags">
-                <a href="#/tag/{{ tag }}">{{ tag }}</a>{{$last ? '' : ', '}}
+                <a href="#/tag/{{ ::tag }}">{{ ::tag }}</a>{{$last ? '' : ', '}}
             </span>
         </div>
     </div>

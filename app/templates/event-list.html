@@ -1,7 +1,7 @@
 <p>JavaScript events</p>
 <hr />
 <ul ng-repeat="event in events">
-    <li><a href="#/event/{{ event.id}}">
-        {{ event.name}}
+    <li><a href="#/event/{{ ::event.id}}">
+        {{ ::event.name}} (<i>{{ ::event.videoCount }}</i>)
     </a></li>
 </ul>

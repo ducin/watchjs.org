@@ -53,6 +53,7 @@
                                 };
                             })
                             .value();
+                    res.videoCount = res.videos.length;
                     return res;
                 });
             },
@@ -71,11 +72,19 @@
                                 };
                             })
                             .value();
+                    res.videoCount = res.videos.length;
                     return res;
                 });
             },
             tags: function() {
-                return rawTags;
+                return _.map(rawTags, function (t) {
+                    return {
+                        name: t,
+                        videoCount: _.filter(rawVideos, function(video){
+                            return _.contains(video.tags, t);
+                        }).length
+                    };
+                });
             }
         }
     };

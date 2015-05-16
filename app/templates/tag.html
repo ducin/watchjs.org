@@ -1,6 +1,6 @@
-<h2>"{{ tag }}" tagged videos</h2>
+<h2>"{{ ::tag }}" tagged videos</h2>
 <ul ng-repeat="video in videos">
-    <li><a href="#/video/{{ video.id}}">
-        {{ video.title}}
+    <li><a href="#/video/{{ ::video.id}}">
+        {{ ::video.title}}
     </a></li>
 </ul>
